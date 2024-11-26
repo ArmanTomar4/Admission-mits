@@ -1,0 +1,78 @@
+<%- include('../layouts/header.ejs') %>
+
+    <br><br><br><br><br><br>
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="card mt-5">
+
+                <!-- /.card-header -->
+                <div class="card-body" style="margin-top: 100px;">
+                    <table id="example1" class="table table-bordered text-center table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="9">View Course Data</th>
+                            </tr>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone no.</th>
+                                <th>dob</th>
+                                <th>Address</th>
+                                <th>Gender</th>
+                                <th>Education</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <%= d.name %>
+                                </td>
+                                <td>
+                                    <%= d.email %>
+                                </td>
+                                <td>
+                                    <%= d.phone %>
+                                </td>
+                                <td>
+                                    <%= d.dob %>
+                                </td>
+                                <td>
+                                    <%= d.Address %>
+                                </td>
+                                <td>
+                                    <%= d.gender %>
+                                </td>
+                                <td>
+                                    <%= d.Education %>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone no.</th>
+                                <th>dob</th>
+                                <th>Address</th>
+                                <th>Gender</th>
+                                <th>Education</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+    <%- include('../layouts/footer.ejs') %>

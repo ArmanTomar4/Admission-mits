@@ -1,0 +1,52 @@
+<%-include('./header.ejs') %>
+    <%-include('./sidebar.ejs') %>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Dashboard</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Dashboard</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                        </div>
+                        <!-- /.card-header -->
+                        <form action="/admin/updateUser/<%= d._id %>" method="post">
+                            <div class="from-group">
+                                <label for="">NAME:</label>
+                                <input type="text" name="n" class="form-control" placeholder="your name" value="<%= d.name %>">
+                            </div>
+                            <div class="from-group">
+                                <label for="">EMAIL:</label>
+                                <input type="text" name="e" class="form-control" placeholder="your email" value="<%= d.email %>">
+                            </div>
+                            <div class="from-group">
+                                <label for="">PASSWORD:</label>
+                                <input type="password" name="p" class="form-control" placeholder="your password" value="<%= d.password %>">
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-info">Update</button>
+                        </form>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div><!-- /.container-fluid -->
+           
+
+        <%-include('./footer.ejs') %>

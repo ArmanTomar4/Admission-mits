@@ -1,0 +1,73 @@
+<%- include('../layouts/header.ejs') %>
+
+    <!-- Main content -->
+     <br><br>
+    <div class="content mt-5">
+        <div class="container-fluid ">
+            <div class="card ">
+
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered text-center table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="9">Display Data</th>
+                            </tr>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone no.</th>
+                                <th >Status</th>
+                                <th>Comment</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% d.forEach((data,index)=> { %>
+                                <tr>
+                                    <td>
+                                        <%= index+1 %>
+                                    </td>
+                                    <td>
+                                        <%= data.name %>
+                                    </td>
+                                    <td>
+                                        <%= data.email %>
+                                    </td>
+                                    <td>
+                                        <%= data.phone %>
+                                    </td>
+                                    <td class="btn btn-iframe-close text-center mt-2">
+                                        <%= data.status %>
+                                    </td>
+                                    <td>
+                                        <%= data.Comment %>
+                                    </td>
+                                    <td>
+                                        <a href="/course/view/<%= data._id %>" class="btn btn-info">View</a>
+                                        <a href="/course/edit/<%= data._id %>" class="btn btn-success">Edit</a>
+                                        <!-- <a href="/course/deleteUser/<%= data._id %>" class="btn btn-danger">Delete</a> -->
+                                    </td>
+                                </tr>
+                                <% }) %>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone no.</th>
+                                <th>Action</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+    <%- include('../layouts/footer.ejs') %>

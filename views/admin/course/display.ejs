@@ -1,0 +1,111 @@
+<%-include('../header.ejs') %>
+    <%-include('../sidebar.ejs') %>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Dashboard</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Dashboard</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="card">
+                        <!-- <div class="card-header"> <button type="button" class="btn btn-info" data-toggle="modal"
+                                data-target="#modal-default"> add student </button>
+                        </div> -->
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>s.no</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Course</th>
+                                        <th>Status</th>
+                                        <th>Comment</th>
+                                        <th></th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% d.forEach((item, index)=> { %>
+                                        <tr>
+                                            <td>
+                                                <%= index+1 %>
+                                            </td>
+                                            <td>
+                                                <%= item.name %>
+                                            </td>
+                                            <td>
+                                                <%= item.email %>
+                                            </td>
+                                            <td>
+                                                <%= item.course %>
+                                            </td>
+                                            <td>
+                                                <%= item.status %>
+                                            </td>
+                                            <td>
+                                                <%= item.comment %>
+                                            </td>
+                                            <td>
+                                                <form action="/admin/statusUpdate/<%= item._id %>" method="post">
+                                                    <input type="hidden" name="name" value="<%= item.name %>">
+                                                    <input type="hidden" name="email" value="<%= item.email %>">
+                                                    <textarea name="comment" class="form-control"></textarea>
+                                                    <button name="status" value="Approved"
+                                                        class="btn btn-success">Approved</button>
+                                                    <button name="status" value="Rejected"
+                                                        class="btn btn-danger">Rejected</button>
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <a href="/admin/CourseView/<%= item._id %>"
+                                                    class="btn btn-info">View</a>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>sr.no</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Course</th>
+                                        <th>Status</th>
+                                        <th>Comment</th>
+                                        <th></th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+
+
+        <%-include('../footer.ejs') %>

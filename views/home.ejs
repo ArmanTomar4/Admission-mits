@@ -1,0 +1,452 @@
+<%- include('./layouts/header.ejs') %>
+    <div class="carousel slide" data-bs-ride="carousel" id="a">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#a" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#a" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#a" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#a" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="./image/AMG_5338.jpeg" alt="" height="500" class="w-100" />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./image/againnaacR.jpeg" alt="" height="500" class="w-100" />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./image/mitsgroup.jpeg" alt="" height="500" class="w-100" />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./image/Presentation2.jpeg" alt="" height="500" class="w-100" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#a" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#a" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <!--slider div end-->''
+    
+    <!-- Courses -->
+    <section id="courses">
+
+        <center>
+            <div class="col-md-12 text-light">
+              <h2>WELCOME TO <span class="text-secondary" style="font-weight: 700;">MUTS</span> GWALIOR</h2>
+            </div>
+            <div class="col-md-12 text-light">
+              <h5>
+                <i class="fa-solid fa-quote-left"></i>
+                <span class="text-secondary" style="font-size: larger; font-weight: 700;">M</span>ission to
+                <span class="text-secondary"  style="font-size: larger; font-weight: 700;">U</span>nnovate
+                <span class="text-secondary" style="font-size: larger; font-weight: 700;">T</span>echnology for
+                <span class="text-secondary" style="font-size: larger; font-weight: 700;">S</span>ociety
+    
+                <i class="fa-solid fa-quote-right"></i>
+    
+              </h5>
+    
+            </div>
+          </center>
+        </section>
+<br>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-4" style="background-color: #233346;">
+                <center>
+                  <h4 style="color: white;" class="vd">VISION</h4>
+                  <hr style="color: white;">
+                </center>
+                <i class="fa-solid fa-quote-left" style="color: white;"></i>
+                <h4 style="color: white; font-weight: 400;">To create world class quality Engineers and Technocrats capable of
+                  providing leadership in all spheres of life and society </h4>
+                <i class="fa-solid fa-quote-right" style="color: white;"></i>
+              </div>
+        
+              <div class="col-md-4 gb">
+                <img src="./image/WhatsApp Image 2024-05-09 at 01.18.44_2581fcb3.jpg" class="image">
+                <div class="overlay">
+                  <h5>Message</h5>
+                  <h4>From Vice Chancellor's Desk</h4>
+                  <p>I'm devu pandit bache bache mere naam se ghabraate h aur me apni bachi aarchi cute jain se pyrr krta hoon
+                  </p>
+                </div>
+              </div>
+        
+              <div class="col-md-4 bg-secondary">
+                <span style="color: white;" class="vd">mission</span>
+                <hr style="color: white;">
+                <ul class="list-item">
+                  <li>To provide quality education in technical and allied disciplines.</li>
+                  <li>To organize and arrange innovative courses in Engineering and Technology.</li>
+                  <li>To arrange vocational courses in the upcoming fields and innovative subjects to meet global advancement.
+                  </li>
+                  <li>To promote research in the fields of Technology and Science.</li>
+                </ul>
+              </div>
+        
+            </div><!--row end-->
+        
+          </div><!--container emd-->
+        
+        <div class="album py-5">
+            <div class="container">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <!-- card-1 -->
+                    <div class="col">
+                        <div class="card shadow-sm  text-white" style="background-color: #233346; ">
+                            <img class="rounded w-100" src="./Images/Course-1.jpeg" alt="Course-1" height="200rem">
+                            <div class="card-body text-center">
+                                <h2>B.Tech</h2>
+                                <p class="card-text  text-white" style="font-weight: 400;">B.Tech is a professional undergraduate engineering
+                                    degree</p>
+
+                                <% if(btech) { %>
+                                    <a href="/display" class="btn btn-info">
+                                        Course Display
+                                    </a>
+                                    <% }else{ %>
+
+                                        <button style="color: white;" type="button" class="btn btn-info"
+                                            data-bs-toggle="modal" data-bs-target="#aa">Register</button>
+                                        <% } %>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-2 -->
+                    <div class="col">
+                        <div class="card shadow-sm  text-white"  style="background-color: #233346;">
+                            <img class="rounded w-100" src="./Images/Course-2.jpeg" alt="Course-2" height="200rem">
+                            <div class="card-body text-center">
+                                <h2>BCA</h2>
+                                <p class="card-text  text-white" style="font-weight: 400;">BCA is a three-year Bachelor's Degree in Computer
+                                    Application</p>
+
+
+
+                                <% if(bca) { %>
+                                    <a href="/display" class="btn btn-info">
+                                        Course Display
+                                    </a>
+                                    <% } else { %>
+
+                                        <button style="color: white;" type="button" class="btn btn-info"
+                                            data-bs-toggle="modal" data-bs-target="#bb">Register</button>
+                                        <% } %>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-3 -->
+                    <div class="col">
+                        <div class="card shadow-sm text-white"  style="background-color: #233346;">
+                            <img class="rounded w-100" src="./Images/Course-3.jpeg" alt="Course-3" height="200rem">
+                            <div class="card-body text-center">
+                                <h2>MCA</h2>
+                                <p class="card-text text-white" style="font-weight: 400;">MCA is a professional post-graduation degree in Computer
+                                    Application</p>
+                                <% if(mca) { %>
+                                    <a href="/display" class="btn btn-info">
+                                        Course Display
+                                    </a>
+                                    <% } else { %>
+
+                                        <button style="color: white;" type="button" class="btn btn-info"
+                                            data-bs-toggle="modal" data-bs-target="#cc">Register</button>
+                                        <% } %>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg">
+        </div><!-- container-fluid end MOON -->
+          <br>
+    <!-- Detail -->
+    <div class="container" id="detail">
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 p-5 overflow-hidden text-bg-white rounded-4 shadow-lg">
+                    <p class="fw-light text-dark my-auto">Madhar institute of Science and Technology in
+                        Gwalior is renowned for its exceptional placement track record. With a dedicated placement
+                        cell, the institute collaborates with top companies and recruiters across various
+                        industries, offering students excellent career opportunities. The robust training and
+                        development programs at SVC prepare students with the skills and knowledge demanded in
+                        today’s competitive job market.</p>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 p-5 overflow-hidden text-bg-white rounded-4 shadow-lg">
+                    <p class="fw-light text-dark my-auto">Madhar institute of Science and Technology,
+                        Gwalior, boasts a modern and expansive campus with state-of-the-art infrastructure to
+                        support a comprehensive learning environment. The institute is equipped with advanced
+                        laboratories, digital libraries, and spacious lecture halls designed to enhance academic
+                        experiences. With cutting-edge technology and high-speed internet connectivity throughout
+                        campus.</p>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 p-5 overflow-hidden text-bg-white rounded-4 shadow-lg">
+                    <p class="fw-light text-dark my-auto">At Madhar institute of Science and Technology,
+                        Gwalior, the relationship between teachers and students is one of mutual respect,
+                        encouragement, and support. Faculty members are dedicated to fostering a learning
+                        environment where students feel comfortable seeking guidance both academically and
+                        personally. Professors at SVC are not only knowledgeable and experienced but also
+                        approachable.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Detail -->
+          
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 style="font-weight: bold; color: #38b4c9; text-shadow: 0.5px 0.5px 1px black;">Associations</h3>
+        <marquee behavior="scroll" direction="">
+          <img
+            src="https://web.mitsgwalior.in/images/banners/acm.png#joomlaImage://local-images/banners/acm.png?width=100&height=100"
+            alt="acm" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/aicte-logo.jpg#joomlaImage://local-images/banners/aicte-logo.jpg?width=100&height=100"
+            alt="aicte" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/ASCE_logo_large.jpg#joomlaImage://local-images/banners/ASCE_logo_large.jpg?width=100&height=100"
+            alt="ASCE" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/coa.png#joomlaImage://local-images/banners/coa.png?width=100&height=100"
+            alt="CA" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/coe.jpg#joomlaImage://local-images/banners/coe.jpg?width=100&height=100"
+            alt="IBM" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/csi.jpg#joomlaImage://local-images/banners/csi.jpg?width=100&height=100"
+            alt="CSI" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/ieee.jpg#joomlaImage://local-images/banners/ieee.jpg?width=100&height=100"
+            alt="IEEE" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/iet.jpg#joomlaImage://local-images/banners/iet.jpg?width=100&height=100"
+            alt="IET" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/iete.jpg#joomlaImage://local-images/banners/iete.jpg?width=100&height=100"
+            alt="IETE" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/iitbombayx.jpg#joomlaImage://local-images/banners/iitbombayx.jpg?width=100&height=100"
+            alt="IIITB-X" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/infosys_logo.jpg#joomlaImage://local-images/banners/infosys_logo.jpg?width=100&height=100"
+            alt="Infosys Campus Connect" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/iste.jpg#joomlaImage://local-images/banners/iste.jpg?width=100&height=100"
+            alt="ISTE" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/iwwa.jpg#joomlaImage://local-images/banners/iwwa.jpg?width=100&height=100"
+            alt="IWWA" />
+
+          <img
+            src="https://web.mitsgwalior.in/images/banners/nccm.jpg#joomlaImage://local-images/banners/nccm.jpg?width=100&height=100"
+            alt="NCCM" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/nssm.jpg#joomlaImage://local-images/banners/nssm.jpg?width=100&height=100"
+            alt="NSSM" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/saeind.jpg#joomlaImage://local-images/banners/saeind.jpg?width=100&height=100"
+            alt="SAE-India" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/skf.jpg#joomlaImage://local-images/banners/skf.jpg?width=100&height=100"
+            alt="SKF" />
+          <img
+            src="https://web.mitsgwalior.in/images/banners/ugc.jpg#joomlaImage://local-images/banners/ugc.jpg?width=100&height=100"
+            alt="UGC" />
+        </marquee>
+      </div>
+    </div>
+  </div><br><br><!--marquee container-->
+
+    </section>
+    <!-- End Courses -->
+    <!--button trigger modal-->
+    <div class="modal fade" id="aa">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content"><!--!modal-content se from content ki space milti hai-->
+                <div class="modal-header"><!--! uppar title ka space milta hai-->
+                    <h5 class="modal-title">Admission Form</h5><!--!modal title se uppr title likh ataa hai-->
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                    <!--! btn-close se button cross ataa hai, data-bs-dismiss="modal" se vo button kaam krta hai-->
+                </div>
+                <!--modal header-->
+                <div class="modal-body"><!--!modal body se niche form bnta hai-->
+                    <form action="/courseInsert" method="post">
+                        Name:
+                        <input type="text" value="<%= n %>" name="name" placeholder="Name" class="form-control" required />
+                        <br />
+                        Email:
+                        <input type="email" value="<%= e %>" name="email" placeholder="Email" class="form-control" required />
+                        <br />
+                        Phone number:
+                        <input type="tel" name="phone" placeholder="Phone Number" class="form-control" required />
+                        <br />
+                        Date of Birth:
+                        <input type="date" name="dob" placeholder="Date of Birth" class="form-control" required />
+                        <br>
+                        Address:
+                        <br />
+                        <textarea name="address" id="" cols="50" rows="5"></textarea>
+                        <br><br>
+                        Gender:
+                        <input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female">Female
+                        <input type="radio" name="gender" value="female">Others
+                        <br /> <br>
+                        Education:
+                        <select name="education" class="form-control" required>
+                            <option value="" disabled selected>Select Education</option>
+                            <option value="10th">10th</option>
+                            <option value="12th">12th</option>
+                            <option value="graduation">Graduation</option>
+                        </select>
+
+                        <br />
+                        Course:
+                        <input style="font-weight: bold;" type="text" name="course" class="form-control" required readonly
+                            value="btech" />
+
+                        <br />
+                        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+                    </form>
+                </div>
+                <!--modal body-->
+            </div>
+            <!--modal content-->
+        </div>
+        <!--modal dialog ---end-->
+    </div>
+    <!--modal end-->
+    <!--button trigger modal-->
+    <div class="modal fade" id="bb">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content"><!--!modal-content se from content ki space milti hai-->
+                <div class="modal-header"><!--! uppar title ka space milta hai-->
+                    <h5 class="modal-title">Admission Form</h5><!--!modal title se uppr title likh ataa hai-->
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                    <!--! btn-close se button cross ataa hai, data-bs-dismiss="modal" se vo button kaam krta hai-->
+                </div>
+                <!--modal header-->
+                <div class="modal-body"><!--!modal body se niche form bnta hai-->
+                    <form action="/courseInsert" method="post">
+                        Name:
+                        <input type="text" value="<%= n %>" name="name" placeholder="Name" class="form-control" required />
+                        <br />
+                        Email:
+                        <input type="email" value="<%= e %>" name="email" placeholder="Email" class="form-control" required />
+                        <br />
+                        Phone number:
+                        <input type="tel" name="phone" placeholder="Phone Number" class="form-control" required />
+                        <br />
+                        Date of Birth:
+                        <input type="date" name="dob" placeholder="Date of Birth" class="form-control" required />
+                        <br>
+                        Address:
+                        <br />
+                        <textarea name="address" id="" cols="50" rows="5"></textarea>
+                        <br><br>
+                        Gender:
+                        <input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female">Female
+                        <input type="radio" name="gender" value="female">Others
+                        <br /> <br>
+                        Education:
+                        <select name="education" class="form-control" required>
+                            <option value="" disabled selected>Select Education</option>
+                            <option value="10th">10th</option>
+                            <option value="12th">12th</option>
+                            <option value="graduation">Graduation</option>
+                        </select>
+
+                        <br />
+                        Course:
+                        <input style="font-weight: bold;" type="text" name="course" class="form-control" required readonly
+                            value="bca" />
+
+                        <br />
+                        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+                    </form>
+                </div>
+                <!--modal body-->
+            </div>
+            <!--modal content-->
+        </div>
+        <!--modal dialog ---end-->
+    </div>
+    <!--modal end-->
+    <!--button trigger modal-->
+    <div class="modal fade" id="cc">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content"><!--!modal-content se from content ki space milti hai-->
+                <div class="modal-header"><!--! uppar title ka space milta hai-->
+                    <h5 class="modal-title">Admission Form</h5><!--!modal title se uppr title likh ataa hai-->
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                    <!--! btn-close se button cross ataa hai, data-bs-dismiss="modal" se vo button kaam krta hai-->
+                </div>
+                <!--modal header-->
+                <div class="modal-body"><!--!modal body se niche form bnta hai-->
+                    <form action="/courseInsert" method="post">
+                        Name:
+                        <input type="text" value="<%= n %>" name="name" placeholder="Name" class="form-control" required />
+                        <br />
+                        Email:
+                        <input type="email" value="<%= e %>" name="email" placeholder="Email" class="form-control" required />
+                        <br />
+                        Phone number:
+                        <input type="tel" name="phone" placeholder="Phone Number" class="form-control" required />
+                        <br />
+                        Date of Birth:
+                        <input type="date" name="dob" placeholder="Date of Birth" class="form-control" required />
+                        <br>
+                        Address:
+                        <br />
+                        <textarea name="address" id="" cols="50" rows="5"></textarea>
+                        <br><br>
+                        Gender:
+                        <input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female">Female
+                        <input type="radio" name="gender" value="female">Others
+                        <br /> <br>
+                        Education:
+                        <select name="education" class="form-control" required>
+                            <option value="" disabled selected>Select Education</option>
+                            <option value="10th">10th</option>
+                            <option value="12th">12th</option>
+                            <option value="graduation">Graduation</option>
+                        </select>
+                        <br />
+                        Course:
+                        <input style="font-weight: bold;" type="text" name="course" class="form-control" required readonly
+                            value="mca" />
+                        <br />
+                        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+                    </form>
+                </div>
+                <!--modal body-->
+            </div>
+            <!--modal content-->
+        </div>
+        <!--modal dialog ---end-->
+    </div>
+    <!--modal end-->
+    <%- include('./layouts/footer.ejs') %>

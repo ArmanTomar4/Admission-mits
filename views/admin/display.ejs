@@ -1,0 +1,129 @@
+<%-include('./header.ejs') %>
+    <%-include('./sidebar.ejs') %>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Dashboard</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Dashboard</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-header"> <button type="button" class="btn btn-info" data-toggle="modal"
+                                data-target="#modal-default"> add student </button>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Password</th>
+                                        <th>image</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% d.forEach((item)=> { %>
+                                    <tr>
+                                        <td><%= item._id %></td>
+                                        <td><%= item.name %></td>
+                                        <td><%= item.email %></td>
+                                        <td><%= item.password %></td>
+                                        <td><img src="<%= item.image.url %>" width="50" height="50"></td>
+                                        <td>
+                                            <a href="/admin/viewUser/<%= item._id %>" class="btn btn-info">View</a>
+                                            <a href="/admin/editUser/<%= item._id %>" class="btn btn-success">Edit</a>
+                                            <a href="/admin/deleteUser/<%= item._id %>" class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+
+                                    <tr>
+                                        <td>Other browsers</td>
+                                        <td>All others</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>U</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Password</th>
+                                        <th>image</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <div class="modal fade" id="modal-default">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Default Modal</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div>  <form action="/admin/userInsert" method="post" enctype="multipart/form-data">
+                    <div class="from-group">
+                        <label for="">NAME:</label>
+                        <input type="text" name="n" class="form-control" placeholder="your name">
+                    </div>
+                    <div class="from-group">
+                        <label for="">EMAIL:</label>
+                        <input type="text" name="e" class="form-control" placeholder="your email">
+                    </div>
+                    <div class="from-group">
+                        <label for="">PASSWORD:</label>
+                        <input type="text" name="p" class="form-control" placeholder="your password">
+                    </div>
+                    <br>
+                    <div class="row mb-4">
+                        <div class="col-lg-3 text-center bg-secondary rounded text-light fw-light my-auto p-2">Profile image</div>
+                        <div class="col-lg-9">
+                            <input  name="image" class="form-control" type="file" required >
+                        </div>
+                    </div><br>
+                    <center><button type="submit" class="btn btn-info">Submit</button></center><br>
+                </form></div>
+                
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+          </div>
+          <!-- /.modal -->
+
+        <%-include('./footer.ejs') %>

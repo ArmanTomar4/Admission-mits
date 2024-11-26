@@ -1,0 +1,76 @@
+<%- include('../layouts/header.ejs') %>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+        <br><br>
+        <!-- Main content -->
+        <div class="content">
+            <div class="container-fluid">
+            </div>
+            <!-- /.card-header -->
+
+            <form action="/courseUpdate/<%= d._id %>" method="post">
+                <div class="form-group text-white">
+                    Name:
+                    <input type="text" value="<%= d.name %>" name="name" placeholder="Name" class="form-control" />
+                    <br />
+                    Email:
+                    <input type="email" value="<%= d.email %>" name="email" placeholder="Email" class="form-control" />
+                    <br />
+                    Phone number:
+                    <input type="tel" value="<%= d.phone %>" name="phone" placeholder="Phone Number"
+                        class="form-control" />
+                    <br />
+                    Date of Birth:
+                    <input type="date" value="<%= d.dob %>" name="dob" placeholder="Date of Birth"
+                        class="form-control" />
+                    <br>
+                    Address:
+                    <br />
+                    <textarea name="address" id="" cols="50" rows="5"><%= d.address %></textarea>
+                    <br><br>
+                    Gender:
+                    <input type="radio" class="text-white" name="gender" value="male" <%= d.gender=='male'?'checked':'' %>>Male
+                    <input type="radio" class="text-white" name="gender" value="female" <%= d.gender=='female'?'checked':'' %>>Female
+                    <input type="radio" class="text-white" name="gender" value="Others" <%= d.gender=='Others'?'checked':'' %>>Others
+                    <br /> <br>
+                    Education:
+                    <select name="education" class="form-control">
+                        <option value="" disabled selected>Select Education</option>
+                        <option value="10th" <%= d.education=='10th'?'selected':'' %>>10th</option>
+                        <option value="12th" <%= d.education=='12th'?'selected':'' %>>12th</option>
+                        <option value="graduation" <%= d.education=='mits'?'selected':'' %>>Graduation</option>
+                    </select>
+                    <br />
+                    Course:
+                    <input style="font-weight: bold;" type="text" name="course" class="form-control" readonly
+                        value="<%= d.course %>" />
+                    <br />
+                    <br>
+                    <center><button type="submit" class="btn btn-info">Update</button></center>
+                </div>
+            </form>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.container-fluid -->
+
+
+    <%- include('../layouts/footer.ejs') %>
